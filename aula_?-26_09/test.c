@@ -20,3 +20,4 @@ int main(){
   trocar(a,b);
   printf("a = %d \nb = %d\n",*a,*b);
 }
+
