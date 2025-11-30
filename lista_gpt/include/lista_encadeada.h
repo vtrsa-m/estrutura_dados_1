@@ -41,10 +41,12 @@ int le_InsereListaFim(struct ListaEnc *lista);
 int le_InsereListaOrdenada(struct ListaEnc *lista);
 void le_EstudantesArquivo(struct ListaEnc *lista);
 void le_ImprimeLista(struct ListaEnc *lista);
+void le_EnderecosNos(struct ListaEnc *lista);
 
 struct Estudante le_BuscaChave(struct ListaEnc *lista, char *chave);
 struct Estudante le_RemoveChave(struct ListaEnc *lista, char *chave);
 
+void le_BuscaImprimeRetroativo(struct ListaEnc *lista, char *chave, int n);
 
 #endif
 
