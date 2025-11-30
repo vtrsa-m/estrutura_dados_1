@@ -114,7 +114,10 @@ void executa(int opcao, struct ListaEnc **lista )
         case 99:
             ec_imprimirTodasAsCores(50);break;
         case 100:
-            le_DestroiLista(lista);break;
+            le_DestroiLista(lista);
+            *lista = le_CriaLista(); 
+            printf("Lista destruida e reiniciada com sucesso!\n");
+            break;
         //adicionado para resolver loop ao digitar opção invalida
         default:
             if(opcao != 0) printf("Opcao invalida!\n");

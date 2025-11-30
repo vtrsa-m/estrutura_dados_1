@@ -12,13 +12,13 @@ struct No
 {
     struct Estudante estudante;
     struct No *proximo;
-    struct No *anterior; // ponteiro para o no anterior (lista dupla)
+    struct No *anterior; // ponteiro para o no anterior
 };
 
 struct ListaEnc
 {
     struct No *cabeca;       
-    struct No *final;        // guardo o ultimo para inserir rapido no fim
+    struct No *final; // guardo o ultimo para inserir rapido no fim
     unsigned int quantidade; 
 };
 
@@ -31,7 +31,6 @@ static int le_ListaNaoInicializada(struct ListaEnc *lista);
 int le_InsereListaInicio2(struct ListaEnc *lista, struct Estudante e);
 int le_InsereListaFim2(struct ListaEnc *lista, struct Estudante e);
 int le_InsereListaOrdenada2(struct ListaEnc *lista, struct Estudante e);
-// Declarei aqui para nao dar erro no main se esquecer de por no .h
 void le_EnderecosNos(struct ListaEnc *lista); 
 
 // Funções Públicas
