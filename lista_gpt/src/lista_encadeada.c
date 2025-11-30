@@ -460,10 +460,10 @@ void le_EstudantesArquivo(struct ListaEnc *lista)
 {
     if (le_ListaNaoInicializada(lista)) return;
 
-    FILE *f = fopen("estudantes.txt", "r");
+    FILE *f = fopen("notas.csv", "r");
     if (f == NULL)
     {
-        printf("Arquivo 'estudantes.txt' nao encontrado.\n");
+        printf("Arquivo 'notas.csv' nao encontrado.\n");
         return;
     }
 
@@ -475,7 +475,7 @@ void le_EstudantesArquivo(struct ListaEnc *lista)
     int contador = 0;
     
     // le o arquivo linha por linha
-    while (fscanf(f, "%d %f %99[^\n]\n", &e.ID, &e.nota, e.nome) == 3)
+    while (fscanf(f, "%d;%[^;];%f\n", &e.ID, e.nome, &e.nota) == 3)
     {
         if (op == 1) le_InsereListaInicio2(lista, e);
         else if (op == 2) le_InsereListaFim2(lista, e);
